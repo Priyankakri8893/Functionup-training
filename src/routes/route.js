@@ -8,9 +8,9 @@ router.get('/test-me', function (req, res) {
 });
 
 router.get('/test-you', function (req, res) {
-    console.log('This is the constant I created', commonFile.name)
+    console.log('This is the constant I created', commonFile.doSomething)
+    commonFile.doSomething();
     res.send('Hello there, welcome to this application!')
 });
-
 
 module.exports = router;
