@@ -2,8 +2,10 @@ const express = require('express');
 const { route } = require('express/lib/application');
 const router = express.Router();
 const commonFile = require('./common')
+const loggerfile = require('../logger/logger')
 
 router.get('/test-me', function (req, res) {
+    loggerfile.welcome();
     res.send('This should be working!')
 });
 
