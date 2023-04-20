@@ -9,10 +9,10 @@ const lodash = require('../lodash_/lodash_')
 
 
 router.get('/test-me', function (req, res) {
-    loggerfile.welcome();
+    loggerfile.welcome('Priyanka kumari');
     utilFile.printDate();
     utilFile.printMonth();
-    utilFile.getBatchInfo();
+    utilFile.getBatchInfo('Technetium', 'W3', 'D4', 'Nodejs module system');
     console.log(formatterFile.trimmedStr);
     console.log(formatterFile.changetoLowerCase);
     console.log(formatterFile.changeToUpperCase);

@@ -10,8 +10,8 @@
 // Call welcome in route.js inside the test-me handler
 
 
-function welcome(){
-    console.log(`Welcome to my application. I am Priyanka kumari and a part of FunctionUp Technetium cohort.`)
+function welcome(name){
+    console.log(`Welcome to my application. I am ${name} and a part of FunctionUp Technetium cohort.`)
 }
 
 module.exports = {welcome};

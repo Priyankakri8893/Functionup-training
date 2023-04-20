@@ -18,8 +18,8 @@ function printMonth(){
     console.log(date.getMonth())
 }
 
-function getBatchInfo(){
-    console.log(`Technetium, W3D4, the topic for today is Nodejs module system`)
+function getBatchInfo(batch_name, week, Day, topic){
+    console.log(`${batch_name}, ${week}${Day}, the topic for today is ${topic}`)
 }
 
 module.exports = {printDate, printMonth, getBatchInfo};
