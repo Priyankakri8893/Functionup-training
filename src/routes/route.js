@@ -42,15 +42,15 @@ router.get('/films', function (req, res) {
 });
 
 router.get('/films/:filmId', function (req, res) {
-    const filmid = parseInt(req.params.filmId);
-    if (filmid < 0 || filmid >= moviesArr.length) {
+    const filmindex = parseInt(req.params.filmId);
+    const filmid = filmindex - 1
+    if (filmindex < 1 || filmindex > moviesArr.length) {
         console.log('No movie exists with this id')
     }else{
         console.log(moviesArr[filmid]);
     }
     res.send('Solution of Problem_5 is done')
 });
-
 
 // router.get('/test-you', function (req, res) {
 //     console.log('The exported module is: ',commonFile)
