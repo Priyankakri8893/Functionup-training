@@ -34,7 +34,7 @@ router.get("/sol2", function (req, res) {
   // Calculate the expected sum of all numbers from 1 to n
   let n = arr.length + 1;
   let expectedSum = (n * (arr[0]+arr[arr.length-1])) / 2;
-
+    
   // Subtract the sum of the array from the expected sum to get the missing number
   missingNumber = expectedSum - sum;
   console.log(missingNumber);
