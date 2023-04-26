@@ -1,6 +1,50 @@
 const express = require('express');
 const router = express.Router();
 
+let persons= [
+    {
+    name: "PK",
+    age: 10,
+    votingStatus: false
+ },
+ {
+    name: "SK",
+    age: 20,
+    votingStatus: false
+ },
+ {
+    name: "AA",
+    age: 70,
+    votingStatus: false
+ },
+ {
+    name: "SC",
+    age: 5,
+    votingStatus: false
+ },
+ {
+    name: "HO",
+    age: 40,
+    votingStatus: false
+ }
+ ]
+ 
+router.post('/votingStatus', function(req, res)  {
+    // Extract voting age from the query parameter
+    const votingAge = Number(req.query.votingAge);
+  
+    // Get an array of persons who can vote and update their votingStatus
+    let personsWhoCanVote = persons.filter(person => person.age >= votingAge);
+    personsWhoCanVote.forEach(person => {
+      person.votingStatus = true;
+    });
+  
+    // Send the updated personsWhoCanVote array as the response
+    console.log(personsWhoCanVote);
+    res.send(personsWhoCanVote)
+  });
+  
+
 router.get('/students/:name', function(req, res) {
     let studentName = req.params.name
     console.log(studentName)
