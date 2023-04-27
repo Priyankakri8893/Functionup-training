@@ -18,3 +18,37 @@ Note: the following video is a good synopsis on stuff we have covered over the w
 
 
 
+{
+  "bookName": "The Great Gatsby",
+  "authorName": "F. Scott Fitzgerald",
+  "category": "Classic",
+  "year": 1925
+}
+
+{
+  "bookName": "1984",
+  "authorName": "George Orwell",
+  "category": "Science Fiction",
+  "year": 1949
+}
+
+{
+  "bookName": "Pride and Prejudice",
+  "authorName": "Jane Austen",
+  "category": "Romance",
+  "year": 1813
+}
+
+{
+  "bookName": "The Hitchhiker's Guide to the Galaxy",
+  "authorName": "Douglas Adams",
+  "category": "Science Fiction",
+  "year": 1979
+}
+
+{
+  "bookName": "To Kill a Mockingbird",
+  "authorName": "Harper Lee",
+  "category": "Classic",
+  "year": 1960
+}
