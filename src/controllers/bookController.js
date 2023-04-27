@@ -5,29 +5,30 @@ const createBook= async function (req, res) {
     let data= req.body
 
     let savedData= await BookModel.create(data)
+    //console.log(savedData);
     res.send({msg: savedData})
 }
 
 const getBooksData= async function (req, res) {
 
-    // let allBooks= await BookModel.find( ).count() // COUNT
+     //let allBooks= await BookModel.find( ).count() // COUNT
 
-    // let allBooks= await BookModel.find( { authorName : "Chetan Bhagat" , isPublished: true  } ) // AND
+     //let allBooks= await BookModel.find( { authorName : "Paulo Coelho" , isPublished: true  } ) // AND
     
     // let allBooks= await BookModel.find( { 
-    //     $or: [ {authorName : "Chetan Bhagat" } , { isPublished: true } , {  "year": 1991 }]
-    // } ).select( { bookName: 1, authorName: 1, _id: 0})n // SELECT keys that we want
+    //     $or: [ {authorName : "Paulo Coelho" } , { isPublished: true } , {  "year": 1991 }]
+    // } ).select( { bookName: 1, authorName: 1, _id: 0}) // SELECT keys that we want
 
-    // let allBooks= await BookModel.find().sort( { sales: -1 }) // SORT
+     //let allBooks= await BookModel.find().sort( { sales: -1 }) // SORT
 
     // PAGINATION 
-    // let page= req.query.page
-    // let allBooks= await BookModel.find().skip(3 * (page-1)).limit(3)
+      //let page= req.query.page
+    //  let allBooks= await BookModel.find().skip(3 * (page-1)).limit(3)
 
-    // let allBooks= await BookModel.find().sort({ sales: -1 }).skip(3 * (page-1)).limit(3).select({ bookName: 1, authorName: 1, _id: 0} )
+      //let allBooks= await BookModel.find().sort({ sales: -1 }).skip(3 * (page-1)).limit(3).select({ bookName: 1, authorName: 1, _id: 0} )
 
 
-    // let allBooks= await BookModel.find({ sales: { $eq:  137 }  }) 
+     let allBooks= await BookModel.find({ sales: { $eq:  137 }  }) 
     // let allBooks= await BookModel.find({ sales: { $ne:  137 }  }) 
     // let allBooks= await BookModel.find({ sales: { $gt:  50 }  }) 
     // let allBooks= await BookModel.find({ sales: { $lt:  50 }  }) 
@@ -51,8 +52,8 @@ const getBooksData= async function (req, res) {
 
     // //  update (not covered: - findByIdAndUpdate | updateOne )
     // let allBooks= await BookModel.update(   
-    //     {  sales: {$gt: 10}  }, //condition
-    //     { $set: { isPublished: true} } // the change that you want to make
+    //     {  sales: {$gt: 9}  }, //condition
+    //     { $set: { isPublished: false} } // the change that you want to make
     //     ) 
 
 
@@ -65,18 +66,18 @@ const getBooksData= async function (req, res) {
     
     // ASYNC AWAIT
     
-    let a= 2+4
-    a= a + 10
-    console.log(a)
-    let allBooks= await BookModel.find( )  //normally this is an asynchronous call..but await makes it synchronous
+    // let a= 2+4
+    // a= a + 10
+    // console.log(a)
+    // let allBooks= await BookModel.find( )  //normally this is an asynchronous call..but await makes it synchronous
 
 
     // WHEN AWAIT IS USED: - database + axios
     //  AWAIT can not be used inside forEach , map and many of the array functions..BE CAREFUL
-    console.log(allBooks)
-    let b = 14
-    b= b+ 10
-    console.log(b)
+    // console.log(allBooks)
+    // let b = 14
+    // b= b+ 10
+    // console.log(b)
     res.send({msg: allBooks})
 }
 
