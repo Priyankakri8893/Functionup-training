@@ -22,7 +22,7 @@ router.get("/sol1", function (req, res) {
     res.send(  { data: missingNumber  }  );
 });
 
-
+//
 router.get("/sol2", function (req, res) {
     //logic : sum of n consecutive numbers is [ n * (first + last) / 2  ]..so get sum of all numbers in array. now take sum of n consecutive numbers.. n would be length+1 as 1 number is missing
     let arr= [33, 34, 35, 37, 38]
